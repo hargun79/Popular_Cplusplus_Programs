@@ -1,6 +1,6 @@
 // To use unordered_multiset and its functions.
 
-#include<bits\stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
 int main()

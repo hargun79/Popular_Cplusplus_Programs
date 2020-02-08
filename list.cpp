@@ -1,6 +1,6 @@
 // To implement list and its associated functions.
 
-#include<bits\stdc++.h> 
+#include<bits/stdc++.h> 
 using namespace std; 
 
 //Function for printing the elements in a list. 

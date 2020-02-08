@@ -1,6 +1,6 @@
 // To use unordered_map and its functions.
  
-#include<bits\stdc++.h> 
+#include<bits/stdc++.h> 
 using namespace std; 
 
 int main() 
