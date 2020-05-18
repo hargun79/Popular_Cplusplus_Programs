@@ -1,4 +1,4 @@
-// To find the greatest number that varies only by 1 bit.
+// To find the smallest greatest number that varies only by 1 bit.
 
 #include<bits/stdc++.h>
 using namespace std;
