@@ -1,4 +1,4 @@
-// To implement assignment problem using brnch and bound method
+// To implement assignment problem using branch and bound method
 
 #include <bits/stdc++.h> 
 using namespace std; 
