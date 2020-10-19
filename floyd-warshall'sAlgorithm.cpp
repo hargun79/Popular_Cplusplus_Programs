@@ -1,4 +1,4 @@
-// To implement Floyd-Warshall Algorithm.
+// To implement Floyd-Warshall Algorithm (all pair shortest path algorithm).
 
 #include<bits/stdc++.h> 
 using namespace std; 
