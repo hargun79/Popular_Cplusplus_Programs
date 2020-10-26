@@ -1,4 +1,4 @@
-// To implement Prim's algorithm
+// To implement Prim's algorithm (To find the minimum spanning tree (MST connects all the vertices together, without any cycles and with the minimum possible total edge weight)) 
 
 #include<bits/stdc++.h>
 using namespace std;
