@@ -1,4 +1,5 @@
-// To implement Bellman-Ford's algorithm. 
+// To implement Bellman-Ford's algorithm (Same as Djikstra's algo but works also for negative weights). 
+
 #include <bits/stdc++.h> 
 using namespace std;
 
