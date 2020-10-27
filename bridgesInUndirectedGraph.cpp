@@ -1,4 +1,4 @@
-// To find bridges in an undirected graph
+// To find bridges in an undirected graph (A bridge is defined as an edge which, when removed, makes the graph disconnected)
  
 #include<bits/stdc++.h> 
 using namespace std;
