@@ -1,4 +1,4 @@
-// To find articulation points in an undirected graph
+// To find articulation points in an undirected graph (An articulation point (or cut vertex) is defined as a vertex which, when removed along with associated edges, makes the graph disconnected (or more precisely, increases the number of connected components in the graph).)
  
 #include<bits/stdc++.h> 
 using namespace std;
