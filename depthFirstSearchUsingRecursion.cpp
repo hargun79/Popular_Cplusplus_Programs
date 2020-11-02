@@ -1,4 +1,4 @@
-// To implement depth first search using recursion
+// To implement depth first search using recursion (To obtain lexicographically smallest DFS sort the edges of each vertex in ascending order)
 
 #include<bits/stdc++.h>
 using namespace std;
