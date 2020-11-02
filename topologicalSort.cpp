@@ -1,4 +1,4 @@
-// To implement topological sorting in a directed asyclic graph
+// To implement topological sorting in a directed acyclic graph (It is a linear ordering of vertices such that for every directed edge uv, vertex u comes before v in the ordering)
  
 #include<bits/stdc++.h> 
 using namespace std; 
