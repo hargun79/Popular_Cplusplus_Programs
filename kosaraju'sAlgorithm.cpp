@@ -1,4 +1,7 @@
-// To implement Kosaraju's algorithm
+// To implement Kosaraju's algorithm (i.e. find all the strongly connected components in O(V+E) time)
+
+/*A directed graph is strongly connected if there is a path between all pairs of vertices. A strongly connected component (SCC) of a directed graph is a maximal strongly 
+connected subgraph.*/
 
 #include<bits/stdc++.h>
 using namespace std; 
