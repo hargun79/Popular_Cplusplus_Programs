@@ -1,4 +1,4 @@
-// To find biconnected components in a given graph
+// To find biconnected components in a given graph (A biconnected component of a graph  is a connected subgraph that cannot be broken into disconnected pieces by deleting any single node)
  
 #include<bits/stdc++.h>
 using namespace std;
