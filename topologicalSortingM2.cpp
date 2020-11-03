@@ -1,32 +1,14 @@
-// To fing lexicographically smallest topological sort
- 
 #include <bits/stdc++.h> 
 using namespace std; 
 
-class Graph 
-{ 
- int V;  
- list<int>* adj; 
- public: Graph(int V);  
-         void addEdge(int u,int v); 
-         void topologicalSort(); 
-}; 
-
-// Constructor 
-Graph::Graph(int V) 
-{ 
- this->V=V; 
- adj=new list<int>[V]; 
-} 
-
 // Function to add an edge to the graph 
-void Graph::addEdge(int u,int v) 
+void addEdge(int src,int dest,list<int> adj[]) 
 { 
- adj[u].push_back(v); 
+ adj[src].push_back(dest); 
 } 
 
 // Function to print the required topological sort of the given graph 
-void Graph::topologicalSort() 
+void topologicalSort(int V,list<int> adj[]) 
 { 
  vector<int> in_degree(V,0); 
  for(int u=0;u<V;u++) 
@@ -49,7 +31,7 @@ void Graph::topologicalSort()
   list<int>::iterator itr; 
   for(itr=adj[u].begin();itr!=adj[u].end();itr++) 
    if(--in_degree[*itr]==0) 
-	s.insert(*itr); 
+    s.insert(*itr); 
   cnt++; 
  } 
  if(cnt!=V) 
@@ -65,14 +47,14 @@ int main()
 { 
  int v,e,src,dest;
  cin>>v>>e;
- Graph g(v); 
+ list<int> adj[v]; 
  for(int i=0;i<e;i++)
  {
   cin>>src>>dest;
   src--;
   dest--;
-  g.addEdge(src,dest);
+  addEdge(src,dest,adj);
  }
- g.topologicalSort(); 
+ topologicalSort(v,adj); 
  return 0; 
-} 
+}
