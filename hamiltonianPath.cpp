@@ -1,4 +1,5 @@
-// To find all the Hamiltonian paths in the given graph
+/* To find all the Hamiltonian paths in the given graph (It is a graph path between two vertices of a graph that visits each vertex exactly once. If a Hamiltonian path exists 
+whose endpoints are adjacent, then the resulting graph cycle is called a Hamiltonian cycle) */
 
 #include<bits/stdc++.h> 
 using namespace std;
