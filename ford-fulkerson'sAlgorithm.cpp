@@ -1,4 +1,4 @@
-// To implement Ford-Fulkerson algorithm to find the maximum flow
+// To implement Ford-Fulkerson algorithm to find the maximum flow (given two vertices source ‘s’ and sink ‘t’ in the graph, find the maximum possible flow from s to t)
  
 #include<bits/stdc++.h> 
 using namespace std; 
