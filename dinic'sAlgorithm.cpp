@@ -1,4 +1,4 @@
-// To implement Dinic's algorithm
+// To implement Dinic's algorithm (given two vertices source ‘s’ and sink ‘t’ in the graph, find the maximum possible flow from s to t)
  
 #include<bits/stdc++.h> 
 using namespace std; 
@@ -17,22 +17,22 @@ class Graph
  int *level; 
  vector<Edge> *adj; 
  public:Graph(int V) 
-	    { 
-		 adj=new vector<Edge>[V]; 
-		 this->V=V; 
-		 level=new int[V]; 
-	    } 
+	{ 
+	 adj=new vector<Edge>[V]; 
+	 this->V=V; 
+	 level=new int[V]; 
+	} 
         //Function to add edge to the graph 
-	    void addEdge(int u,int v,int C) 
-	    { 
-		 Edge a{v,0,C,adj[v].size()}; 
+	void addEdge(int u,int v,int C) 
+	{ 
+	 Edge a{v,0,C,adj[v].size()}; 
          Edge b{u,0,0,adj[u].size()}; 
          adj[u].push_back(a); 
-		 adj[v].push_back(b); 
-	    } 
+	 adj[v].push_back(b); 
+	} 
         bool BFS(int s,int t); 
-	    int sendFlow(int s,int flow,int t,int ptr[]); 
-	    int DinicMaxflow(int s,int t); 
+	int sendFlow(int s,int flow,int t,int ptr[]); 
+	int DinicMaxflow(int s,int t); 
 }; 
 
 // Function to assign levels and check if more flow can be sent 
@@ -77,7 +77,7 @@ int Graph::sendFlow(int u,int flow,int t,int start[])
    { 
     e.flow+=temp_flow; 
     adj[e.v][e.rev].flow-=temp_flow; 
-	return temp_flow; 
+    return temp_flow; 
    } 
   } 
  } 
