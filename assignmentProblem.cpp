@@ -1,4 +1,4 @@
-// To implement assignment problem using branch and bound method
+// To implement assignment problem using branch and bound method (Special case of min cost flow problem, in which we have to find the min cost in which all the tasks can be done)
 
 #include <bits/stdc++.h> 
 using namespace std; 
