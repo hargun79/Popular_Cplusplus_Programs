@@ -6,67 +6,47 @@ connected subgraph.*/
 #include<bits/stdc++.h>
 using namespace std; 
 
-class Graph 
-{ 
- int V;  
- list<int> *adj;  
- void fillOrder(int v,bool visited[],stack<int> &Stack); 
- void DFSUtil(int v,bool visited[]); 
- public:Graph(int V); 
-	    void addEdge(int v, int w); 
-        void printSCCs(); 
-        Graph getTranspose(); 
-}; 
-
-Graph::Graph(int V) 
-{ 
- this->V=V; 
- adj=new list<int>[V]; 
-} 
-
 // Function to print according to DFS 
-void Graph::DFSUtil(int v,bool visited[]) 
+void DFSUtil(int v,bool visited[],list<int> adj[]) 
 { 
  visited[v]=true; 
  cout<<v<<" "; 
  list<int>::iterator i; 
  for(i=adj[v].begin();i!=adj[v].end();i++) 
   if(!visited[*i]) 
-   DFSUtil(*i,visited); 
+   DFSUtil(*i,visited,adj); 
 } 
 
 // Function to get the transpose graph
-Graph Graph::getTranspose() 
-{ 
- Graph g(V); 
+void getTranspose(list<int> adj[],int V,list<int> adj2[]) 
+{  
  for(int v=0;v<V;v++) 
  { 
   list<int>::iterator i; 
   for(i=adj[v].begin();i!=adj[v].end();i++) 
-   g.adj[*i].push_back(v);  
- } 
- return g; 
+   adj2[*i].push_back(v);  
+ }  
 } 
 
 // FUnction to add an edge
-void Graph::addEdge(int v,int w) 
+void addEdge(int v,int w,list<int> adj[]) 
 { 
  adj[v].push_back(w);  
 } 
 
 // Function to build the stack by performing DFS
-void Graph::fillOrder(int v,bool visited[],stack<int> &Stack) 
+void fillOrder(int v,bool visited[],stack<int> &Stack,list<int> adj[]) 
 { 
  visited[v]=true; 
  list<int>::iterator i; 
  for(i=adj[v].begin();i!=adj[v].end();i++) 
   if(!visited[*i]) 
-   fillOrder(*i,visited,Stack); 
+   fillOrder(*i,visited,Stack,adj); 
  Stack.push(v); 
 } 
 
 // Function to implement Kosaraju's algorithm 
-void Graph::printSCCs() 
+void printSCCs(list<int> adj[],int V) 
 { 
  stack<int> Stack; 
  bool *visited=new bool[V]; 
@@ -74,8 +54,9 @@ void Graph::printSCCs()
   visited[i]=false; 
  for(int i=0;i<V;i++) 
   if(visited[i]==false) 
-   fillOrder(i, visited, Stack); 
- Graph gr=getTranspose(); 
+   fillOrder(i,visited,Stack,adj); 
+ list<int> adj2[V];
+ getTranspose(adj,V,adj2); 
  for(int i=0;i<V;i++) 
   visited[i]=false; 
  while(Stack.empty()==false) 
@@ -84,7 +65,7 @@ void Graph::printSCCs()
   Stack.pop(); 
   if(visited[v]==false) 
   { 
-   gr.DFSUtil(v,visited); 
+   DFSUtil(v,visited,adj2); 
    cout<<'\n'; 
   } 
  } 
@@ -94,13 +75,13 @@ int main()
 { 
  int v,e;
  cin>>v>>e;
- Graph g(v);
+ list<int> adj[v];
  int src,dest;
  for(int i=0;i<e;i++)
  {
   cin>>src>>dest;
-  g.addEdge(src,dest);
+  addEdge(src,dest,adj);
  }
- g.printSCCs();
+ printSCCs(adj,v);
  return 0; 
-} 
+}
