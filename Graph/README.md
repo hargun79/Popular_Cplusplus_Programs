@@ -1,19 +1,19 @@
 Order of visiting:-
-1. [depthFirstSearchUsingRecursion.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/depthFirstSearchUsingRecursion.cpp)
-1. [noOfConnectedComponents.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/noOfConnectedComponents.cpp)
-1. [kruskal'sAlgorithmM2.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/kruskal'sAlgorithmM2.cpp)
-1. [prim'sAlgorithmM2.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/prim'sAlgorithmM2.cpp)
-1. [djikstra'sAlgorithmM3.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/djikstra'sAlgorithmM3.cpp)
-1. [bellma-ford'sAlgorithmM2](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/bellman-ford'sAlgorithmM2.cpp)
-1. [floyd-warshall'sAlgorithm.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/floyd-warshall'sAlgorithm.cpp)
-1. [allPathsFromSrcToDest.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/allPathsFromSrcToDest.cpp)
-1. [shortestPath.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/shortestPath.cpp)
-1. [longestPath.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/longestPath.cpp)
-1. [articulataionPoints.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/articulationPoints.cpp)
-1. [bridgesInUndirectedGraph.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/bridgesInUndirectedGraph.cpp)
-1. [biconnecedGraph.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/biconnectedGraph.cpp)
-1. [biconnectedComponents.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/biconnectedComponents.cpp)
-1. [kosaraju'sAlgorithm.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/kosaraju'sAlgorithm.cpp)
-1. [topologicalSortM2.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/topologicalSortingM2.cpp)
-1. [hamiltonianPath.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/hamiltonianPath.cpp)
-1. [ford-fulkerson'sAlgorithm.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/ford-fulkerson'sAlgorithm.cpp)
+1. [depthFirstSearchUsingRecursion.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/depthFirstSearchUsingRecursion.cpp) :- To implement depth first search using recursion (To obtain lexicographically smallest DFS sort the edges of each vertex in ascending order)
+1. [noOfConnectedComponents.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/noOfConnectedComponents.cpp) :- To find the number of connected components using DFS.
+1. [kruskal'sAlgorithmM2.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/kruskal'sAlgorithmM2.cpp) :- To find minimum spanning tree using DSU (A minimum spanning tree is a subset of the edges of a connected, edge-weighted undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight.)
+1. [prim'sAlgorithmM2.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/prim'sAlgorithmM2.cpp) :- To find the minimum spanning tree
+1. [djikstra'sAlgorithmM3.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/djikstra'sAlgorithmM3.cpp) :- To implement Djikstra's Algorithm (Given a graph and a source vertex in the graph, find shortest paths from source to all vertices in the given graph).
+1. [bellman-ford'sAlgorithmM2](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/bellman-ford'sAlgorithmM2.cpp) :- To implement Bellman-Ford's algorithm (Same as Djikstra's algo but works also for negative weights).
+1. [floyd-warshall'sAlgorithm.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/floyd-warshall'sAlgorithm.cpp) :- To implement Floyd-Warshall Algorithm (all pair shortest path algorithm).
+1. [allPathsFromSrcToDest.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/allPathsFromSrcToDest.cpp) :- To find all the paths between any two nodes in a graph
+1. [shortestPath.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/shortestPath.cpp) :- To find the shortest path between two vertices of a graph
+1. [longestPath.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/longestPath.cpp) :- To find the longest path in a weighted undirected graph
+1. [articulataionPoints.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/articulationPoints.cpp) :- To find articulation points in an undirected graph (An articulation point (or cut vertex) is defined as a vertex which, when removed along with associated edges, makes the graph disconnected (or more precisely, increases the number of connected components in the graph).)
+1. [bridgesInUndirectedGraph.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/bridgesInUndirectedGraph.cpp) :- To find bridges in an undirected graph (A bridge is defined as an edge which, when removed, makes the graph disconnected)
+1. [biconnecedGraph.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/biconnectedGraph.cpp) :- To find if a given graph is biconnected or not
+1. [biconnectedComponents.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/biconnectedComponents.cpp) :- To find biconnected components in a given graph (A biconnected component of a graph is a maximally connected subgraph that cannot be broken into disconnected pieces by deleting any single node)
+1. [kosaraju'sAlgorithm.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/kosaraju'sAlgorithm.cpp) :- To implement Kosaraju's algorithm (i.e. find all the strongly connected components in O(V+E) time) (A directed graph is strongly connected if there is a path between all pairs of vertices. A strongly connected component (SCC) of a directed graph is a maximal strongly connected subgraph.)
+1. [topologicalSortM2.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/topologicalSortingM2.cpp) :- To implement topological sorting in a directed acyclic graph (It is a linear ordering of vertices such that for every directed edge uv, vertex u comes before v in the ordering)
+1. [hamiltonianPath.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/hamiltonianPath.cpp) :- To find all the Hamiltonian paths in the given graph (It is a graph path between two vertices of a graph that visits each vertex exactly once. If a Hamiltonian path exists whose endpoints are adjacent, then the resulting graph cycle is called a Hamiltonian cycle)
+1. [ford-fulkerson'sAlgorithm.cpp](https://github.com/hargun79/Popular_Cplusplus_Programs/blob/master/Graph/ford-fulkerson'sAlgorithm.cpp) :- To implement Ford-Fulkerson algorithm to find the maximum flow (given two vertices source ‘s’ and sink ‘t’ in the graph, find the maximum possible flow from s to t)
