@@ -1,72 +1,51 @@
 // To find diameter of a binary tree
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-
-int m;
-
-struct node
+ 
+struct node 
 {
- int val,lh,rh;
- struct node *left,*right;
+ int data;
+ node *left,*right;
 };
-
-// Allocates new nodes.
-node *getNode(int val)
+ 
+// Function to create a new node of tree and returns pointer
+node* newNode(int data)
 {
- node *ret = (node*)calloc(1, sizeof(node));
- ret->val=val;
- return ret;
-}  
-
-// Function to calculate the diameter
-int diameter(node *ptr)
-{
- if(ptr)
- {
-  ptr->lh=diameter(ptr->left);
-  ptr->rh=diameter(ptr->right);
-  if(ptr->lh+ptr->rh+1>m)
-   m=ptr->lh+ptr->rh+1;
-  return (ptr->lh>ptr->rh?ptr->lh:ptr->rh)+1;
- }
- else
-  return 0;
+ node* n=new node;
+ n->data=data;
+ n->left=NULL;
+ n->right=NULL;
+ return n;
 }
-
+ 
+// Function to Compute height of a tree.
+int height(node* node)
+{
+ if(node==NULL)
+  return 0;
+ return 1+max(height(node->left),height(node->right));
+}
+ 
+// Function to get diameter of a binary tree
+int diameter(node* tree)
+{
+ if(tree==NULL)
+  return 0;
+ int lheight=height(tree->left);
+ int rheight=height(tree->right);
+ int ldiameter=diameter(tree->left);
+ int rdiameter=diameter(tree->right);
+ return max(lheight+rheight+1,max(ldiameter,rdiameter));
+}
+ 
 int main()
 {
- m=INT_MIN;
- node *root=NULL,*ptr;
- int n,x,i;
- cin>>n>>x;
- root=getNode(x);
- string str;
- while(--n)
- {
-  cin>>str;
-  i=0;
-  ptr=root;
-  while(str[i] && ptr)
-  {
-   if(str[i]=='L')
-   {
-    if(ptr->left==NULL)
-     ptr->left=getNode(0);
-    ptr=ptr->left;
-   }
-   else
-   {
-    if(ptr->right==NULL)
-     ptr->right=getNode(0);
-    ptr=ptr->right;
-   }
-   i++;
-  }
-  cin>>x;
-  ptr->val=x;
- }
- diameter(root);
- cout<<m;
+ node* root=newNode(1);
+ root->left=newNode(2);
+ root->right=newNode(3);
+ root->left->left=newNode(4);
+ root->left->right=newNode(5);
+ cout<<"Diameter of the given binary tree is "<<diameter(root);
  return 0;
 }
