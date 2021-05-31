@@ -13,7 +13,7 @@ Initialize the matrix with -1
 Only 4-5 statements will be added after adding memoization
 One base condition will be added so that stored values do not make recursive calls again.
 
-The above approach is called bottum up approach. */
+The above approach is called top down approach or memoization approach. */
 
 
 // To implement the 0-1 knapsack problem
