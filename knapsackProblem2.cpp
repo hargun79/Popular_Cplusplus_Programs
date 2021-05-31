@@ -1,4 +1,22 @@
-// To implement the knapsack problem
+/* Start DP from here:-
+How to recognize that the question will be done from DP:
+1. It is optimization problem(max,min,etc.)
+2. It offers choice like either we can take element or cant take it.
+Now, first make recursive solution
+Recursive consists of two parts:
+1. Base condition: It is the smallest valid value/
+2. Choice tree: One recursive call for checking if it can be taken or not and two recursive calls for choice for either taking it or not taking it.
+Then memoize the recursive solution to make it a dp solution
+How to know what constraints to take in the array:
+The constraints which are decreasing there value in recursive calls
+Initialize the matrix with -1
+Only 4-5 statements will be added after adding memoization
+One base condition will be added so that stored values do not make recursive calls again.
+
+The above approach is called bottum up approach. */
+
+
+// To implement the 0-1 knapsack problem
 
 #include <bits/stdc++.h> 
 using namespace std; 
