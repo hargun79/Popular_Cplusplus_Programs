@@ -1,4 +1,9 @@
-// To implement knapsack problem
+/* This approach is called bottom up approach or the tabulation approach
+In this the base condition is converted to initialization of the matrix
+And the recursive calls are changed into an iterative approach
+The choice tree remains the same */
+
+// To implement 0-1 knapsack problem
 
 #include<bits/stdc++.h>
 using namespace std;
