@@ -6,7 +6,7 @@ using namespace std;
 int dp[1001][1001];
 
 // Function to find the longest common subsequence
-int lcs(string str1,string str2,int m,int n) 
+int lcs(string &str1,string &str2,int m,int n) 
 { 
   if(n==0 || m==0)
    return 0;

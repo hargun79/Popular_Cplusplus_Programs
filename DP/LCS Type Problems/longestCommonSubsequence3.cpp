@@ -35,7 +35,7 @@ void lcs(char *X,char *Y,int m,int n)
   } 
   else 
    if(L[i-1][j]>L[i][j-1]) 
-	i--; 
+	  i--; 
   else
    j--; 
  } 
