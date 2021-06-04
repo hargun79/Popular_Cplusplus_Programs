@@ -33,7 +33,3 @@ int main()
  cout<<ans;
  return 0; 
 } 
-
-// This code is contributed 
-// by Akanksha Rai 
-
