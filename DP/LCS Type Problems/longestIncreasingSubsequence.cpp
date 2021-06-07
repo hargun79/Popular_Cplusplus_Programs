@@ -32,3 +32,14 @@ int main()
  cout<<"Length of LIS is: "<<lis(str1,str2,str1.length(),str2.length()); 
  return 0; 
 } 
+
+/*
+Another method
+int *lis=new int[n];
+for(i=0;i<n;i++)
+ lis[i]=1;
+for(i=1;i<n;i++)
+ for(j=0;j<i;j++)
+  if(arr[i]>arr[j] && lis[i]<lis[j]+1)
+   lis[i]=lis[j]+1;
+*/
