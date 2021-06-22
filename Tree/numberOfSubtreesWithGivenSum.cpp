@@ -12,8 +12,8 @@ int countSubtreesWithSumXUtil(Node *root,int &result,int x) // Helper function
 int countSubtreesWithSumX(Node* root,int x)
 {
  if(!root)
-	return 0;
+  return 0;
  int result=0;
- countSubtreesWithSumXUtil(root , result , x);
+ countSubtreesWithSumXUtil(root,result,x);
  return result;
 }
