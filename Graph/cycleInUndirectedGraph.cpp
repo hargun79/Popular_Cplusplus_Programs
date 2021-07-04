@@ -20,7 +20,7 @@ bool isCycle(int V, vector<int>adj[])
  bool vis[V];
  memset(vis,false,sizeof vis);
  for(int i=0;i<V;i++)
-	if(!vis[i])
-	 dfs(adj,vis,i,-1);
+  if(!vis[i])
+   dfs(adj,vis,i,-1);
  return flag;
 }
