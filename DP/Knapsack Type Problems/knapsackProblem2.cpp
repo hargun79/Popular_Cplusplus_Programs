@@ -21,35 +21,25 @@ The above approach is called top down approach or memoization approach. */
 #include <bits/stdc++.h> 
 using namespace std; 
 
-// Returns the value of maximum profit 
-int knapSackRec(int cap,int wt[],int val[],int i,int** dp) 
+int dp[1002][1002];
+    
+int knapSackRec(int cap,int wt[],int val[],int i) 
 { 
- if(i<0) 
+ if(i==0) 
   return 0; 
  if(dp[i][cap]!=-1) 
   return dp[i][cap]; 
- if(wt[i]>cap) 
- { 
-  dp[i][cap]=knapSackRec(cap,wt,val,i-1,dp); 
-  return dp[i][cap]; 
- } 
- else 
- { 
-  dp[i][cap]=max(val[i]+knapSackRec(cap-wt[i],wt,val,i-1,dp),knapSackRec(cap,wt,val,i-1,dp)); 
-  return dp[i][cap]; 
- } 
-} 
-
-int knapSack(int cap, int wt[], int val[], int n) 
+ if(wt[i-1]>cap)   
+  return dp[i][cap]=knapSackRec(cap,wt,val,i-1); 
+ else  
+  return dp[i][cap]=max(val[i-1]+knapSackRec(cap-wt[i-1],wt,val,i-1),knapSackRec(cap,wt,val,i-1)); 
+}
+    
+//Function to return max value that can be put in knapsack of capacity W.
+int knapSack(int W, int wt[], int val[], int n) 
 { 
- int** dp; 
- dp=new int*[n]; 
- for(int i=0;i<n;i++) 
-  dp[i]=new int[cap+1]; 
- for(int i=0;i<n;i++) 
-  for(int j=0;j<cap+1;j++) 
-   dp[i][j]=-1; 
- return knapSackRec(cap,wt,val,n-1,dp); 
+ memset(dp,-1,sizeof dp);
+ return knapSackRec(W,wt,val,n);
 } 
 
 int main() 
@@ -60,4 +50,4 @@ int main()
  int n=sizeof(val)/sizeof(val[0]); 
  cout<<knapSack(cap,wt,val,n); 
  return 0; 
-} 
+}
